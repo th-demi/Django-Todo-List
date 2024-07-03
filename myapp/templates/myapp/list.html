@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+{% block title %}View and edit list{% endblock %}
+{% block list %}{{lst.name}}{% endblock %}
+
+{% block content %}
+    <h3>{{lst.name}}</h3>
+    <form method="post" action="#">
+    {% csrf_token %}
+        <ul>
+            {% for item in lst.item_set.all %}
+                {% if item.completed == True %}
+                    <li><input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}</li>
+                {% else %}
+                    <li><input type="checkbox", value="clicked", name="c{{item.id}}">{{item.text}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <button type="submit", name="save", value="save" class="btn btn-dark">Save</button>
+        <button type="submit", name="newItem", value="newItem" class="btn btn-dark">Add Item</button>	
+        <input type="text", name="new">
+    </form>
+{% endblock %}
