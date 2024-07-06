@@ -1,0 +1,240 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    
+}
+.app-name {
+    display: flex;
+    align-items: center;
+    height: 16vh;
+    padding-left: 11.5%;
+    padding-right: 5%;
+    justify-content: space-between;
+
+}
+.app-name h1 {
+    color: #1864FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0px;
+
+}
+.header-link1{
+    color: #1864FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 1%;
+    margin-bottom: 0px;
+    margin-left: 40%;
+    text-decoration: none;
+}
+.header-link2{
+    color: #1864FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 1%;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+.header-link1:hover {
+    color: #f38165;
+}
+.header-link2:hover {
+    color: #f38165;
+}
+.logout-button {
+    background: none;
+    border: none;
+    color: #1864FF;
+    font-size: 2em;
+    font-weight: 600;
+
+    padding-top: 5%;
+}
+
+.logout-button:hover {
+    color: #f38165;
+}
+.outer-container{
+    display: flex;
+    align-items: flex-start;
+    height: 84vh;
+    padding-left: 5%;
+    margin-left: 0px;
+}
+.girl-image{
+    max-height: 650px;
+    max-width: 660px; 
+    object-fit: cover;
+}
+.home-container{
+    display: block;
+    padding-left: 10%;
+}
+.home-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 60%;
+    padding-bottom: 12%;
+}
+.home-container a {
+    display: block;
+    color: #3BAD94;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 25%;
+    padding-bottom: 8%;
+    transition: color 0.3s ease;
+}
+
+.home-container a:hover {
+    color: #068772;
+}
+.login-container{
+    display: block;
+    padding-left: 10%;
+}
+.login-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 40%;
+    padding-bottom: 12%;
+}
+.registration-container{
+    display: block;
+    padding-left: 10%;
+}
+.registration-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 10%;
+    padding-bottom: 4%;
+}
+.registration-container button{
+    margin-top: 4%;
+}
+.lists-container{
+    display: block;
+    padding-left: 10%;
+    height: 100%;
+}
+.lists-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 40%;
+    padding-bottom: 12%;
+}
+.lists-container p a{
+    text-decoration: none;
+    color: #3BAD94;
+    font-family: 'Inter', sans-serif;
+    padding-left: 10%;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.lists-container a{
+    text-decoration: none;
+}
+.lists-container p a:hover {
+    color: #068772;
+}
+.no-lists{
+    padding-bottom: 3%;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.create-list-link{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.list-container{
+    display: block;
+    padding-left: 10%;
+    white-space: nowrap;
+}
+.list-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 40%;
+    padding-bottom: 12%;
+}
+.list-container .btn{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-right: 2%;
+}
+.list-container .save-btn{
+    display: block;
+}
+.create-container{
+    display: block;
+    padding-left: 10%;
+}
+.create-container h2{
+    color: #f38165;
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 66%;
+    padding-bottom: 12%;
+}
+.create-container a {
+    display: block;
+    color: #3BAD94;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 25%;
+    padding-bottom: 8%;
+    transition: color 0.3s ease;
+}
+
+.create-container a:hover {
+    color: #068772;
+}
+
+/* Assuming you have a static directory in your Django app */
+/* Example: myapp/static/myapp/css/custom.css */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .delayed-animation {
+    animation: fadeIn 0.8s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0; /* Initially hide elements to fade in */
+  }
+  
+  .delayed-animation:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first child */
+  }
+  
+  .delayed-animation:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for the second child */
+  }
+  
+  .delayed-animation:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for the third child */
+  }
+  
