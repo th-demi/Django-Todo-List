@@ -8,7 +8,7 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return redirect('/home')
+            return redirect('/view')
     else:
         form = UserRegistrationForm()
     return render(request, "accounts/register.html", {'form': form})

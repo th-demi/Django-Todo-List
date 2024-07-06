@@ -1,5 +1,10 @@
 {% extends 'myapp/base.html' %}
-{% block title %}Home page{% endblock %}
+{% block title %}TodoList{% endblock %}
+
 {% block content %}
-    <h3>ToDo List</h3>
+<div class="home-container">
+    <h2 class="delayed-animation">Hey there 👋</h2>
+    <a href="/login" class="delayed-animation">Login</a>
+    <a href="/register" class="delayed-animation">Signup</a>
+</div>
 {% endblock %}

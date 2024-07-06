@@ -4,11 +4,13 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h3>Login</h3>
-<form method = "post">
-    {% csrf_token %}
-    {{form|crispy}}
-    <p>Don't have an account? Create one <a href="/register">here</a></p>
-    <button type="submit", name="save" class="btn btn-dark">Register</button>
-</form>
+<div class="login-container">
+    <h2>Login</h2>
+    <form method = "post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <p>Don't have an account? Create one <a href="/register">here</a></p>
+        <button type="submit", name="save" class="btn btn-dark">Login</button>
+    </form>
+</div>
 {% endblock %}

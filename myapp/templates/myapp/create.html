@@ -2,10 +2,12 @@
 {% block title %}Create form{% endblock %}
 
 {% block content %}
-<h3>Create a new List</h3>
+<div class="create-container">
+    <h2>New list 📝</h2>
     <form method = "post" action="/create/">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit", name="save" class="btn btn-dark">Create new</button>
-    </form>
+    </form>    
+</div> 
 {% endblock %}
