@@ -81,23 +81,14 @@ WSGI_APPLICATION = 'Todo_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',  # Database engine (PostgreSQL in this case)
+        'NAME': 'railway',  # Database name
+        'USER': 'postgres',  # Database user
+        'PASSWORD': 'YrQWLWCJwNDpOSMCsbXKBwjBtdyXhcdt',  # Database password
+        'HOST': 'roundhouse.proxy.rlwy.net',  # Database host
+        'PORT': '37790',  # Database port
     }
 }
-
-# Override DATABASES setting if running on railway server
-if os.getenv('RAILWAY_SERVER'):  # Assuming you set this environment variable
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'railway',
-            'USER': 'postgres',
-            'PASSWORD': 'YrQWLWCJwNDpOSMCsbXKBwjBtdyXhcdt',
-            'HOST': 'roundhouse.proxy.rlwy.net',
-            'PORT': '37790',
-        }
-    }
 
 
 # Password validation
