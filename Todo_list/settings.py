@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kk@qd)!#(^((aps84n4&s^9f0vt029&fa8otoq3wuzo)4l9js3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','localhost']
 
 
 # Application definition
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'Todo_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'YrQWLWCJwNDpOSMCsbXKBwjBtdyXhcdt',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '37790',
     }
 }
 
@@ -123,7 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = []
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
