@@ -11,15 +11,17 @@
 </head>
 <body>
     <div class="app-name">
-        <h1>Todo List</h1>
-        {% if user.is_authenticated %}
-            <a href="{% url 'create' %}" class="header-link1">Create</a>
-            <a href="{% url 'view' %}" class="header-link2">View</a>
-            <form action="{% url 'logout' %}" method="post" id="logoutForm">
-                {% csrf_token %}
-                <button type="submit" class="logout-button">Logout</button>
-            </form>
-        {% endif %}
+        <h1><a href="{% url 'home' %}" class="site-name">Todo List</a></h1>
+        <div class="nav-links">
+            {% if user.is_authenticated %}
+                <a href="{% url 'create' %}" class="nav-link">Create</a>
+                <a href="{% url 'view' %}" class="nav-link">View</a>
+                <form action="{% url 'logout' %}" method="post" id="logoutForm">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-button nav-link">Logout</button>
+                </form>
+            {% endif %}
+        </div>
     </div>
     <div class="outer-container">
         <img src="{% static 'myapp/images/notes_girl.jpeg' %}" alt="Girl image" class="girl-image">

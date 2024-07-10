@@ -9,7 +9,7 @@
         {% endfor %}
     {% else %}
         <p class="no-lists">You haven't created any Todo lists yet.</p>
-        <a href="{% url 'create' %}" class="create-list-link">Create a new list</a>
+        <p>Create a new<a href="{% url 'create' %}" class="create-list-link">one</a></p>
     {% endif %}
 </div>
 {% endblock %}

@@ -1,240 +1,252 @@
+/* Existing CSS */
+
 body, html {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
     font-family: 'Inter', sans-serif;
-    
 }
+
 .app-name {
     display: flex;
     align-items: center;
     height: 16vh;
-    padding-left: 11.5%;
-    padding-right: 5%;
+    padding: 0 5%;
     justify-content: space-between;
-
 }
+
 .app-name h1 {
-    color: #1864FF;
-    font-family: 'Inter', sans-serif;
+    margin: 0;
     font-size: 2em;
     font-weight: 600;
-    margin-bottom: 0px;
+}
 
-}
-.header-link1{
+.app-name .site-name {
     color: #1864FF;
-    font-family: 'Inter', sans-serif;
-    font-size: 2em;
-    font-weight: 600;
-    margin-top: 1%;
-    margin-bottom: 0px;
-    margin-left: 40%;
     text-decoration: none;
 }
-.header-link2{
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.app-name .nav-links .nav-link, .logout-button {
     color: #1864FF;
-    font-family: 'Inter', sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 600;
-    margin-top: 1%;
-    margin-bottom: 0px;
     text-decoration: none;
-}
-.header-link1:hover {
-    color: #f38165;
-}
-.header-link2:hover {
-    color: #f38165;
-}
-.logout-button {
     background: none;
     border: none;
-    color: #1864FF;
-    font-size: 2em;
-    font-weight: 600;
-
-    padding-top: 5%;
+    padding: 0 10px;
+    margin-left: 10px; /* Adjust spacing between links */
 }
 
-.logout-button:hover {
+.app-name .nav-links .nav-link:hover, .logout-button:hover {
     color: #f38165;
 }
-.outer-container{
+
+.outer-container {
     display: flex;
     align-items: flex-start;
     height: 84vh;
-    padding-left: 5%;
-    margin-left: 0px;
+    padding: 0 5%;
+    overflow: hidden;
 }
-.girl-image{
-    max-height: 650px;
-    max-width: 660px; 
+
+.girl-image {
+    max-height: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
-.home-container{
-    display: block;
-    padding-left: 10%;
+
+.home-container, .login-container, .registration-container, .lists-container, .list-container, .create-container {
+    padding: 10%;
 }
-.home-container h2{
+
+h2 {
     color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
-    padding-top: 60%;
-    padding-bottom: 12%;
 }
-.home-container a {
-    display: block;
+
+a {
     color: #3BAD94;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 1.2em;
     font-weight: 700;
     text-decoration: none;
-    padding-left: 25%;
-    padding-bottom: 8%;
     transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #068772;
+}
+
+.logout-button {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.button {
+    margin-top: 4%;
+}
+
+.home-container h2, .login-container h2, .registration-container h2 {
+    color: #F38165;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.home-container a {
+    color: #3BAD94;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 3em;
+    font-weight: 600;
+    padding-left: 10px;
 }
 
 .home-container a:hover {
     color: #068772;
 }
-.login-container{
-    display: block;
-    padding-left: 10%;
-}
-.login-container h2{
-    color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-    padding-top: 40%;
-    padding-bottom: 12%;
-}
-.registration-container{
-    display: block;
-    padding-left: 10%;
-}
-.registration-container h2{
-    color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-    padding-top: 10%;
-    padding-bottom: 4%;
-}
-.registration-container button{
-    margin-top: 4%;
-}
-.lists-container{
-    display: block;
-    padding-left: 10%;
-    height: 100%;
-}
-.lists-container h2{
-    color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-    padding-top: 40%;
-    padding-bottom: 12%;
-}
-.lists-container p a{
-    text-decoration: none;
-    color: #3BAD94;
-    font-family: 'Inter', sans-serif;
-    padding-left: 10%;
-    font-size: 2rem;
-    font-weight: 700;
-}
-.lists-container a{
+
+.login-container a {
     text-decoration: none;
 }
-.lists-container p a:hover {
-    color: #068772;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.no-lists{
-    padding-bottom: 3%;
-    font-size: 1.4em;
-    font-weight: 500;
+
+.delayed-animation {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 }
-.create-list-link{
-    font-size: 1.2em;
-    font-weight: 400;
+
+.delayed-animation:nth-child(1) {
+    animation-delay: 0.2s;
 }
-.list-container{
-    display: block;
-    padding-left: 10%;
-    white-space: nowrap;
+
+.delayed-animation:nth-child(2) {
+    animation-delay: 0.4s;
 }
-.list-container h2{
-    color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-    padding-top: 40%;
-    padding-bottom: 12%;
+
+.delayed-animation:nth-child(3) {
+    animation-delay: 0.6s;
 }
-.list-container .btn{
-    margin-top: 2%;
-    margin-bottom: 4%;
-    margin-right: 2%;
+
+@media (max-width: 768px) {
+    .app-name {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .app-name h1, .nav-link, .logout-button {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .outer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .girl-image {
+        width: 100%;
+        max-width: 80%;
+    }
 }
-.list-container .save-btn{
-    display: block;
+
+@media (max-width: 480px) {
+    .app-name h1, .nav-link, .logout-button {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 1em;
+    }
+
+    .outer-container {
+        padding: 0 2%;
+    }
+
+    .girl-image {
+        max-width: 100%;
+    }
 }
-.create-container{
-    display: block;
-    padding-left: 10%;
+
+/* New Styles for view.html */
+
+.lists-container {
+    padding: 10%;
 }
-.create-container h2{
-    color: #f38165;
-    font-family: 'Inter', sans-serif;
-    font-size: 3em;
-    font-weight: 600;
-    padding-top: 66%;
-    padding-bottom: 12%;
+
+.lists-container h2 {
+    font-size: 3em; /* Matches the size of <h2 class="delayed-animation">Hey there 👋</h2> */
+    font-weight: 600; /* Matches the weight */
+    color: #f38165; /* Matches the color */
+    margin-bottom: 20px;
 }
-.create-container a {
-    display: block;
-    color: #3BAD94;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
+
+.lists-container a {
+    font-size: 1.6em; /* Matches the size of <a href="/login" class="delayed-animation">Login</a> */
+    font-weight: 700; /* Matches the weight */
+    color: #3BAD94; /* Matches the color */
     text-decoration: none;
-    padding-left: 25%;
-    padding-bottom: 8%;
     transition: color 0.3s ease;
 }
 
-.create-container a:hover {
+.lists-container a:hover {
     color: #068772;
 }
 
-/* Assuming you have a static directory in your Django app */
-/* Example: myapp/static/myapp/css/custom.css */
+.no-lists {
+    font-size: 1.2em; /* Plain font size */
+}
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .delayed-animation {
-    animation: fadeIn 0.8s ease-in-out;
-    animation-fill-mode: both;
-    opacity: 0; /* Initially hide elements to fade in */
-  }
-  
-  .delayed-animation:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first child */
-  }
-  
-  .delayed-animation:nth-child(2) {
-    animation-delay: 0.4s; /* Delay for the second child */
-  }
-  
-  .delayed-animation:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the third child */
-  }
-  
+.create-list-link {
+    font-size: 1.2em; /* Plain font size */
+    font-weight: 700; /* Matches the weight of <a href="/login" class="delayed-animation">Login</a> */
+    color: #3BAD94; /* Matches the color */
+    text-decoration: none;
+}
+
+.create-list-link:hover {
+    color: #068772;
+    text-decoration: underline;
+}
+.list-container h2 {
+    font-size: 3em; /* Matches the size of <h2 class="delayed-animation">Hey there 👋</h2> */
+    font-weight: 600; /* Matches the weight */
+    color: #f38165; /* Matches the color */
+    margin-bottom: 20px;
+}
+.create-container h2 {
+    font-size: 3em; /* Matches the size of <h2 class="delayed-animation">Hey there 👋</h2> */
+    font-weight: 600; /* Matches the weight */
+    color: #f38165; /* Matches the color */
+    margin-bottom: 20px;
+}
